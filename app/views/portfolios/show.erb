@@ -1,0 +1,10 @@
+<div id="portfolios-show">
+  <h1><%= @portfolio.title %></h1>
+  <h3><a class='edit' href="/portfolios/<%= @portfolio.id %>/edit">Edit this portfoilo</a></h3>
+
+  <div id="image-container">
+    <% @portfolio.images.each do |image| %>
+      <a href="/images/<%= image.id %>"><img src='<%= image.data.url(:medium) %>'></a>
+    <% end %>
+  </div>
+</div>

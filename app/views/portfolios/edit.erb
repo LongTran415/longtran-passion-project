@@ -1,0 +1,28 @@
+<h1>Edit this portfolio</h1>
+
+<p>Add an image:</p>
+<form action="/images" method="post" enctype="multipart/form-data">
+  <input type='hidden' name='portfolio_id' value='<%= @portfolio.id %>'>
+  <input type='file' name="data">
+  <input type='submit' value='Save'></input>
+</form>
+
+<p>select an image and click delete:</p>
+
+  <% @portfolio.images.each do |image| %>
+  <p>
+    <img src='<%= image.data.url(:thumbnail) %>'>
+    <form action="/images/<%= image.id%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+    </form>
+ </p>
+ <p>
+  <form id="image-tag-adder" method="post" action="/portfolios/<%= image.id%>/edit">
+    <input type="text" name="text" placeholder="#write tags here..">
+    <input type="submit" value="add tags">
+  </form>
+</p>
+  <% end %>
+
+<p><a href="/portfolios/<%= @portfolio.id %>">back to porfolio</a></p>

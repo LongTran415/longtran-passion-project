@@ -1,0 +1,8 @@
+class Portfolio < ActiveRecord::Base
+  belongs_to :user
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+  has_many :images
+=======
+>>>>>>> Add portfolio menu with post route to porfolio/new
+  delegate :username, to: :user
+end

@@ -1,0 +1,31 @@
+Outline of Portfolio Builder 
+
+functionality:
+
+- A USER can sign up, login, and logout
+- A USER can upload photos
+	- A PHOTO has a size limit
+	- A PHOTO can be uploaded via desktop or phone 
+	- A PHOTO can only be of a certain type, i.e .jpeg, .png, etc. 
+ 
+- A USER can add a FILTER to the PHOTO
+
+- A USER can make an image private or public by adding a PASSWORD to unlock the picture. The PASSWORD can be requested from the USER by another USER through a MESSAGING SYSTEM.  
+
+- When a PHOTO is uploaded, it gets stored on their account’s PORTFOLIO PAGE
+- The PORTFOLIO PAGE will display the their uploads in column fashion
+- When a USER clicks on a PHOTO within the PORTFOLIO PAGE, they can see all the COMMENTS made on this picture, add a COMMENT to the PHOTO. 
+- A USER can EDIT their COMMENTS made.
+
+Possible API’s to look into:
+
+for photo editing:
+- http://cloudinary.com/documentation/jquery_integration
+- https://developers.aviary.com/effects-api
+- http://taptaptap.com/blog/creating-a-camera-plus-fx/
+- http://www.imagemagick.org/script/index.php
+- http://mattgemmell.com/mgimageutilities/
+
+for portfolio: 
+- https://docs.moodle.org/dev/Portfolio_API
+- http://www.denondj.com/assets/premium/cubeportfolio/documentation/index.html

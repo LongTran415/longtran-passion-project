@@ -1,0 +1,14 @@
+<% if current_user %>
+<h1>Welcome!</h1>
+  <h2><%= current_user.username %>'s portfolio menu:</h2>
+<ul>
+  <li><a href="/portfolios/new">Add a Portfolio</a></li>
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+  <li><a href="/portfolios/#{@portfolio.id}">View Portfolios</a></li>
+  <li><a href="/portfolios">Browse Porfolios</a></li>
+=======
+  <li>View Portfolios</li>
+  <li>Browse Porfolios</li>
+>>>>>>> Add portfolio menu with post route to porfolio/new
+</ul>
+<% end %>

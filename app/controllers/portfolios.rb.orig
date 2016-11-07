@@ -1,0 +1,43 @@
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+get '/portfolios/' do
+  erb :'portfolios/show'
+end
+=======
+>>>>>>> Add portfolio menu with post route to porfolio/new
+
+get '/portfolios/new' do
+  @portfolios = Portfolio.all
+  erb :'/portfolios/new'
+end
+
+get '/portfolios/:id' do
+  @portfolio = Portfolio.find(params[:id])
+  erb :'portfolios/show'
+end
+
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+get '/portfolios/:id/edit' do
+  @portfolio = Portfolio.find(params[:id])
+  erb :'portfolios/edit'
+end
+
+=======
+>>>>>>> Add portfolio menu with post route to porfolio/new
+post '/portfolios' do
+  @portfolio = Portfolio.create(title: params[:title], user_id: session[:id])
+  redirect "/portfolios/#{@portfolio.id}"
+end
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+
+delete '/portfolios/:id' do
+  @portfolio = Portfolio.find(params[:id])
+  @portfolio.destroy
+
+  redirect "/portfolios/new"
+end
+
+get '/portfolios' do
+  erb :index
+end
+=======
+>>>>>>> Add portfolio menu with post route to porfolio/new

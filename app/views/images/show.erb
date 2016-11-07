@@ -1,0 +1,23 @@
+<div class="page-image">
+  <img src='<%= @image.data.url(:large) %>'>
+</d>
+
+<p>
+  <a href="/portfolios/<%= @image.portfolio.id %>">back to porfolio</a>
+</p>
+
+<form action="/comments" method="POST" id="comment-form">
+  <input type="hidden" name="comment[image_id]" value="<%= @image.id %>">
+  <textarea rows="4" cols="50" name="comment[body]" placeholder="Enter text here..." form="comment-form"></textarea>
+  <input type="submit">
+</form>
+
+<h2>comments:</h2>
+<div id="comments">
+  <% @image.comments.each do |comment| %>
+    <p>
+      <header><%= comment.author %></header>
+      <%= comment.body %>
+    </p>
+  <% end %>
+</div>

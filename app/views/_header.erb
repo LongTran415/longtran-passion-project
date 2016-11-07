@@ -1,0 +1,10 @@
+<% if current_user %>
+  <a class='logo' href="/users/<%= current_user.id %> ">World<light>map</light></a>
+  <form action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Logout</button>
+  </form>
+<% else %>
+  <a href="/sessions/new">Login</a>
+  <a href="/users/new">Register</a>
+<% end %>

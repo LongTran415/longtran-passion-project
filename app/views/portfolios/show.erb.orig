@@ -1,0 +1,15 @@
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+<h1>Title: <%= @portfolio.title %></h1>
+
+<h3><a href="/portfolios/<%= @portfolio.id %>/edit">Edit this portfoilo</a></h3>
+
+<div id="image-container">
+  <% @portfolio.images.each do |image| %>
+    <a href="/images/<%= image.id %>"><img src='<%= image.data.url(:medium) %>'></a>
+  <% end %>
+</div>
+=======
+<h1><%= @portfolio.username %>'s Portfolios</h1>
+
+<h2>Edit this portfoilo</h2>
+>>>>>>> Add portfolio menu with post route to porfolio/new

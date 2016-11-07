@@ -1,0 +1,31 @@
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+<h1>Add a portfolio:</h1>
+=======
+<h1>Add A Portfolio:</h1>
+>>>>>>> Add portfolio menu with post route to porfolio/new
+
+<div id="form-container">
+  <form id="porfolio-form" method="post" action="/portfolios">
+    <input type="text" name="title" placeholder="title here"/>
+    <br>
+
+    <input type="submit" value="upload:">
+  </form>
+</div>
+
+<p>
+<<<<<<< d65d8bed92b6ff03bba56ad1a72ca918a0446bb0
+  <h2>collection:</h2>
+  <ul>
+    <% @portfolios.each do |portfolio|%>
+      <a href="/portfolios/<%= portfolio.id %>"><li><%= portfolio.title %></li></a>
+      <form action="/portfolios/<%= portfolio.id%>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="delete">
+      </form>
+    <% end %>
+  </u>
+=======
+  <h2>Images:</h2>
+>>>>>>> Add portfolio menu with post route to porfolio/new
+</p>

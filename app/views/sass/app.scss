@@ -1,0 +1,31 @@
+@import "normalize";
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 200px 20px 20px;
+  border: 1px dotted black;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #FFF8DC;
+}
+.header-text {
+  text-align: center;
+}
+
+th {
+  text-align: left;
+}
+.errors {
+  color: red;
+}
+.form-box {
+    width: 300px;
+}
+
+.tag-container {
+  margin: 10px auto;
+  width: 600px;
+  padding: 1px 8px 8px;
+  border: 1px dotted black;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}

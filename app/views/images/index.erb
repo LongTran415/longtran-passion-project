@@ -1,0 +1,10 @@
+<h1>images here!!!!!</h1>
+
+<ul>
+  <% @images.each do |image| %>
+    <li>
+      <img src="<%= image.data.url(:thumbnail) %>">
+      <p><%= image.data_file_name %></p>
+    </li>
+  <% end %>
+</ul>
