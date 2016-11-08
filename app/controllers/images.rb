@@ -21,7 +21,7 @@ delete '/images/:id' do
 end
 
 post '/images/:id/tags' do
-  @entry = Image.find(params[:id])
+  @image = Image.find(params[:id])
 
   tag_array = params[:tag][:name].scan(/\S*#(?:\[[^\]]+\]|\S+)/)
 

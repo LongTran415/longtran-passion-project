@@ -20,6 +20,7 @@ function handleCommentPost(evt){
 
     // Insert into the existing DOM
     $('#comments').prepend(body);
+    $(form).trigger('reset')
   }).fail(function(response){
     console.log("Bad Request, 400")
   })
