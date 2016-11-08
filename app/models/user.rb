@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
 
-  validates_presence_of :username
-  validates_uniqueness_of :username
-  validates_presence_of :password
-  validates_presence_of :email
-  validates_uniqueness_of :email
+  validates_presence_of :username, message: "can't be blank"
+  validates_uniqueness_of :username, message: "already exist"
+  validates_presence_of :password, message: "can't be blank"
+  validates_presence_of :email, message: "can't be blank"
+  validates_uniqueness_of :email, message: "already exist"
 
   has_many :portfolios
   has_many :comments

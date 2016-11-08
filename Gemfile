@@ -15,14 +15,14 @@ gem 'rake'
 gem 'bcrypt'
 gem 'shotgun'
 gem 'pry'
-
+gem 'hirb'
 gem 'faker'
 
 gem "paperclip", "~> 5.0.0"
 
 gem 'sass'
 gem 'bourbon'
-
+gem 'dotenv'
 
 group :test do
   gem 'shoulda-matchers'

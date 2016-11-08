@@ -2,7 +2,7 @@
 <ul>
   <% @user.portfolios.each do |portfolio| %>
     <li>
-      <%= portfolio.title %>
+      <a href="/portfolios/<%= portfolio.id %>"><%= portfolio.title %></a>
     </li>
   <% end %>
 </ul>

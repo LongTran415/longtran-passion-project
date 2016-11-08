@@ -1,16 +1,13 @@
-
-# USERS INDEX
-get '/users' do
-  @users = User.all
-  erb :'users/index'
+get '/' do
+  erb :index
 end
 
-# USERS NEW
+# new user
 get '/users/new' do
   erb :'users/new'
 end
 
-# USERS CREATE
+# create user
 post '/users' do
 
   if params[:password_confirmation] == params[:user][:password]
@@ -31,33 +28,34 @@ post '/users' do
 
 end
 
-# USERS SHOW
+# user show page
 get '/users/:id' do
   @user = User.find(params[:id])
   erb :'users/show'
 end
 
-# USERS EDIT
-get '/users/:id/edit' do
-  @user = User.find(params[:id])
-  erb :'users/edit'
-end
+# # user update
+# get '/users/:id/edit' do
+#   @user = User.find(params[:id])
+#   erb :'users/edit'
+# end
+#
+#
+# # user update
+# put '/users/:id' do
+#   @user = User.find(params[:id])
+#   @user.update(params[:user])
+#   redirect "/users/#{@user.id}"
+# end
+#
+#
+# # user delete
+# delete '/users/:id' do
+#   @user = User.find(params[:id])
+#   @user.destroy
+#   redirect "/users"
+# end
 
-
-# USERS UPDATE
-put '/users/:id' do
-  @user = User.find(params[:id])
-  @user.update(params[:user])
-  redirect "/users/#{@user.id}"
-end
-
-
-# USERS DESTROY
-delete '/users/:id' do
-  @user = User.find(params[:id])
-  @user.destroy
-  redirect "/users"
-end
 
 # GET users portfolios
 get '/users/:id/portfolios' do

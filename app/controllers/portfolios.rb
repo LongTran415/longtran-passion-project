@@ -5,7 +5,12 @@ end
 
 get '/portfolios/:id' do
   @portfolio = Portfolio.find(params[:id])
-  erb :'portfolios/show'
+  if @portfolio.nil?
+    @error = "You don't have any portfolios"
+    erb :'portfolios/index'
+  else
+    erb :'portfolios/show'
+  end
 end
 
 get '/portfolios/:id/edit' do
