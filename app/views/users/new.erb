@@ -1,7 +1,17 @@
-<h1>Registration Page</h1>
-
+<h3>Register here:</h3>
+<div class="errors">
+  <ul>
+    <% if @errors %>
+      <% @errors.each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
 <form action="/users" method="POST">
-  <input type="text" name="user[email]" placeholder="Email:">
+  <input type="email" name="user[email]" placeholder="Email:">
   <input type="text" name="user[username]" placeholder="Username:">
   <input type="password" name="user[password]" placeholder="Password:">
   <input type="password" name="password_confirmation" placeholder="Password Confirmation:">

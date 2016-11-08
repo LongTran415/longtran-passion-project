@@ -33,10 +33,12 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.1)
     diff-lcs (1.2.5)
+    dotenv (2.1.1)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    hirb (0.7.3)
     i18n (0.7.0)
     json (1.8.2)
     method_source (0.8.2)
@@ -111,8 +113,10 @@ DEPENDENCIES
   bcrypt
   bourbon
   capybara
+  dotenv
   factory_girl
   faker
+  hirb
   paperclip (~> 5.0.0)
   pg
   pry

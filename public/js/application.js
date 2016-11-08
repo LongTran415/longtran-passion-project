@@ -1,18 +1,6 @@
 $(document).ready(function() {
-  $("#login-form").on('submit', handleLogin);
   $("#comment-form").on('submit', handleCommentPost);
 });
-
-function handleLogin(evt){
-  evt.preventDefault();
-
-  var form = $(this);
-
-  if ($("input[name=email]").val() == ""){
-    $('#login-error').prepend("Invaild username or password")
-  }
-
-}
 
 function handleCommentPost(evt){
   evt.preventDefault();

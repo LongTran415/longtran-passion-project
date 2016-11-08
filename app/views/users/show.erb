@@ -4,7 +4,10 @@
     <h2><%= current_user.username %>'s portfolio menu:</h2>
   <ul>
     <li><a href="/portfolios/new">Add a Portfolio</a></li>
-    <li><a href="/portfolios/#{@portfolio.id}">View Portfolios</a></li>
-    <li><a href="/portfolios">Browse Porfolios</a></li>
+    <li><a href="/users/<%= current_user.id %>/portfolios">View Portfolios</a></li>
+    <li><a href="/">Browse</a></li>
+    <% if @error %>
+      <li> <%= @error %></li>
+    <% end %>
   </ul>
   <% end %>

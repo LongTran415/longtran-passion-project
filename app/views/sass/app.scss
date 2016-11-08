@@ -7,11 +7,16 @@
   border: 1px dotted black;
   font-family: "Courier New", Courier, monospace;
   background-color: #FFF8DC;
+  height: 100%;
 }
 .header-text {
   text-align: center;
 }
-
+.log-out-form {
+  position: absolute;
+  padding-bottom: 5px;
+  right: 50px;
+}
 th {
   text-align: left;
 }

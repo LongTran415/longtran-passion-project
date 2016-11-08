@@ -10,8 +10,10 @@ class Image < ActiveRecord::Base
   url: "/uploads/:attachment/:id/:style/:basename.:extension"
 
   validates_attachment_content_type :data, content_type: /\Aimage\/.*\z/
-
+  
   belongs_to :portfolio
   has_many :comments
-  has_many :tags 
+  has_many :image_tags
+  has_many :tags, through: :image_tags
+
 end

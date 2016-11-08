@@ -19,3 +19,20 @@ delete '/images/:id' do
 
   redirect "/portfolios/#{@image.portfolio.id}/edit"
 end
+
+post '/images/:id/tags' do
+  @entry = Image.find(params[:id])
+
+  tag_array = params[:tag][:name].scan(/\S*#(?:\[[^\]]+\]|\S+)/)
+
+  tag_array.map! do |name|
+    @tag = Tag.find_by(name: name)
+    if @tag.nil?
+      new_tag = Tag.create(name: name)
+      @image.tags.push(new_tag)
+    else
+      @image.tags.push(@tag) unless @image.tags.include?(@tag)
+    end
+  end
+  erb :"images/show"
+end
