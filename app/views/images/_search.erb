@@ -1,0 +1,15 @@
+<br />
+<form action="/images/search" method="POST">
+  <input type="text" name="tag[name]" placeholder="#something.."/>
+  <input type="submit" value="Search"/>
+</form>
+<br />
+
+<ul>
+  <% @images.each do |image| %>
+    <li>
+      <img src="<%= image.data.url(:thumbnail) %>">
+      <p><%= image.data_file_name %></p>
+    </li>
+  <% end %>
+</ul>

@@ -1,6 +1,16 @@
 get '/images' do
   @images = Image.all.limit(20)
-  erb :"images/index"
+  erb :"images/show"
+end
+
+get '/images/search' do
+  @images = Image.all
+  erb :"images/_search", locals: {images: @images}
+end
+
+post '/images/search' do
+  @images = Image.all
+  erb :"images/_search", locals: {images: @images}
 end
 
 post '/images' do
