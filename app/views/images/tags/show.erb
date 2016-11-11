@@ -1,10 +1,6 @@
-<div class="container">
   <h2>Images relating to this tag</h2>
   <ul>
     <% @tag.images.each do |image| %>
-      <li>
-        <a href="/images/<%= image.id %>"><img src='<%= image.data.url(:medium) %>'></a>
-      </li>
+      <a href="/images/<%= image.id %>"><img src='<%= image.data.url(:medium) %>'></a>
     <% end %>
   </ul>
-</div>

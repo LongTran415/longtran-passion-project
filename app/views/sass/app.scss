@@ -1,7 +1,14 @@
+ // using bourbon api
 @import "normalize";
+
+// CSSmaps api
 @import "nanogallery";
 @import "maps";
+
+// magnificPopup api
 @import "magnific-popup";
+
+
 
 .container {
   margin: 20px auto;
@@ -32,9 +39,10 @@ th {
 }
 
 .tag-container {
+  right: -20px;
   margin: 10px auto;
   width: 600px;
-  padding: 1px 8px 8px;
+  padding: 0px 8px 8px;
   border: 1px dotted black;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -99,4 +107,7 @@ button {
   /*border is optional*/
   border-bottom:1px solid #444;
   cursor: pointer;
+}
+
+.location {
 }

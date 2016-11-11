@@ -5,25 +5,29 @@
 <p>
   <a href="/portfolios/<%= @image.portfolio.id %>">back to porfolio</a>
 </p>
-<p>
-  <% if @confrim_add_loca %>
-    <%= @confrim_add_loca %>
-  <% end %>
-  <text style="font-size:14px"><em>add a location</em></text>
-  <form type="text" action="/images/<%= @image.id %>/location" method="post" class="form-box">
-    <input type="text" name="name"  />
-    <input type="submit" value="add location" />
-  </form>
-</p>
-<div class="tag-container">
-  <div class="tags">
-    <p>
-      <% @image.tags.each do |tag| %>
-      <a href="/tags/<%= tag.id %>/images" style="font-size:15px"><%= tag.name %></a>
-      <% end %>
-    </p>
-  </div>
+
+<div class="location">
+  <p>
+    <% if @confrim_add_loca %>
+      <%= @confrim_add_loca %>
+    <% end %>
+    <text style="font-size:14px"><em>add a location</em></text>
+    <form type="text" action="/images/<%= @image.id %>/location" method="post" class="form-box">
+      <input type="text" name="name"  />
+      <input type="submit" value="add location" />
+    </form>
+  </p>
 </div>
+  
+  <div class="tag-container">
+    <div class="tags">
+      <p>
+        <% @image.tags.each do |tag| %>
+        <a href="/tags/<%= tag.id %>/images" style="font-size:15px"><%= tag.name %></a>
+        <% end %>
+      </p>
+    </div>
+  </div>
 
 <text style="font-size:14px"><em>tags must start with a #</em></text>
 <form type="text" action="/images/<%= @image.id%>/tags" method="post" class="form-box">

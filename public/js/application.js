@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
   $("#comment-form").on('submit', handleCommentPost);
-  // $(".left-arrow").on('click', forward);
-  // $(".right-arrow").on('click', backward);
+  $(".left-arrow").on('click', forward);
+  $(".right-arrow").on('click', backward);
 });
 
 function handleCommentPost(evt){
@@ -29,7 +29,10 @@ function handleCommentPost(evt){
   })
 }
 
-function backward(evt) {
+function forward(evt){
   evt.preventDefault();
+}
 
+function backward(evt){
+  evt.preventDefault();
 }
