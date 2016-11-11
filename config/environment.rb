@@ -92,3 +92,8 @@ Paperclip.io_adapters.register Paperclip::SinatraFileAdapter do |target|
     false
   end
 end
+
+if $0 =='irb'
+  require 'hirb'
+  Hirb.enable
+end

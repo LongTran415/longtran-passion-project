@@ -1,5 +1,8 @@
+
 $(document).ready(function() {
   $("#comment-form").on('submit', handleCommentPost);
+  $(".left-arrow").on('click', forward);
+  $(".right-arrow").on('click', backward);
 });
 
 function handleCommentPost(evt){
@@ -20,7 +23,16 @@ function handleCommentPost(evt){
 
     // Insert into the existing DOM
     $('#comments').prepend(body);
+    $(form).trigger('reset')
   }).fail(function(response){
     console.log("Bad Request, 400")
   })
+}
+
+function forward(evt){
+  evt.preventDefault();
+}
+
+function backward(evt){
+  evt.preventDefault();
 }

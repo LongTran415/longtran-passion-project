@@ -17,12 +17,6 @@
       <input type="submit" value="delete">
     </form>
  </p>
- <p>
-  <form id="image-tag-adder" method="post" action="/portfolios/<%= image.id%>/edit">
-    <input type="text" name="text" placeholder="#write tags here..">
-    <input type="submit" value="add tags">
-  </form>
-</p>
   <% end %>
 
 <p><a href="/portfolios/<%= @portfolio.id %>">back to porfolio</a></p>

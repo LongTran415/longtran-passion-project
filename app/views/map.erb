@@ -1,0 +1,50 @@
+<div id="map-continents">
+ <ul class="continents">
+  <li class="c1"><a href="/countries/africa">Africa</a></li>
+  <li class="c2"><a class="popup-with-form" href="/countries/asia">Asia</a></li>
+  <li class="c3"><a href="#australia">Australia</a></li>
+  <li class="c4"><a href="#europe">Europe</a></li>
+  <li class="c5"><a href="#north-america">North America</a></li>
+  <li class="c6"><a href="#south-america">South America</a></li>
+ </ul>
+</div>
+
+<div id="map"> </div>
+
+
+<script type="text/javascript">
+  $("#map-continents").CSSMap({
+    size: 1450,
+    mapStyle: "vintage",
+    cities: true,
+    tooltips: false,
+    responsive: "auto",
+    multipleClick: {
+      enable: true,
+      searchUrl: "search.php",
+      searchLink: "Search",
+      searchLinkVar: "region",
+      separato: "+",
+      clicksLimit: 0
+    }
+  });
+
+  $('.popup-with-form').magnificPopup({
+  type: 'inline',
+  preloader: false,
+  focus: '#name',
+
+  // When elemened is focused, some mobile browsers in some cases zoom in
+  // It looks not nice, so we disable it:
+  callbacks: {
+    beforeOpen: function() {
+      if($(window).width() < 700) {
+        this.st.focus = false;
+      } else {
+        this.st.focus = '#name';
+      }
+    }
+  }
+});
+
+</script>

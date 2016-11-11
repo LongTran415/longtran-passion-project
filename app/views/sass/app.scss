@@ -1,9 +1,19 @@
+ // using bourbon api
 @import "normalize";
+
+// CSSmaps api
+@import "nanogallery";
+@import "maps";
+
+// magnificPopup api
+@import "magnific-popup";
+
+
 
 .container {
   margin: 20px auto;
-  width: 600px;
-  padding: 0px 200px 20px 20px;
+  width: 800px;
+  padding: 0px 200px 600px 50px;
   border: 1px dotted black;
   font-family: "Courier New", Courier, monospace;
   background-color: #FFF8DC;
@@ -14,9 +24,10 @@
 }
 .log-out-form {
   position: absolute;
-  padding-bottom: 5px;
-  right: 50px;
+  right: 40px;
+  top: 25px;
 }
+
 th {
   text-align: left;
 }
@@ -28,9 +39,75 @@ th {
 }
 
 .tag-container {
+  right: -20px;
+  margin: 10px auto;
+  width: 600px;
+  padding: 0px 8px 8px;
+  border: 1px dotted black;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#comments {
   margin: 10px auto;
   width: 600px;
   padding: 1px 8px 8px;
   border: 1px dotted black;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+}
+
+.image-container img {
+  position: absolute;
+  display: none;
+}
+
+.image-container img:first-child {
+  display: block;
+}
+
+.image {
+    position: absolute;
+    width: 380px;
+    height: 500px;
+    border: 1px soid red;
+}
+
+.nav-container {
+  position: relative;
+}
+
+.nav-container span {
+  position: absolute; top: 150px;
+}
+
+.nav-container span.right-arrow {
+  top: 300px;
+  right: -10px;
+}
+.nav-container span.left-arrow {
+  top: 300px;
+  left: -20px;
+}
+span.right-arrow {
+  content: "\003E";
+  font-size: 40px;
+}
+span.left-arrow {
+  content: "\003C";
+  font-size: 40px;
+}
+button {
+  background:none!important;
+  border:none;
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  border-bottom:1px solid #444;
+  cursor: pointer;
+}
+
+.location {
 }

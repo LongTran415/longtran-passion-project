@@ -1,6 +1,16 @@
 get '/images' do
   @images = Image.all.limit(20)
-  erb :"images/index"
+  erb :"images/show"
+end
+
+get '/images/search' do
+  @images = Image.all
+  erb :"images/_search", locals: {images: @images}
+end
+
+post '/images/search' do
+  @images = Image.all
+  erb :"images/_search", locals: {images: @images}
 end
 
 post '/images' do
@@ -21,7 +31,7 @@ delete '/images/:id' do
 end
 
 post '/images/:id/tags' do
-  @entry = Image.find(params[:id])
+  @image = Image.find(params[:id])
 
   tag_array = params[:tag][:name].scan(/\S*#(?:\[[^\]]+\]|\S+)/)
 
@@ -35,4 +45,18 @@ post '/images/:id/tags' do
     end
   end
   erb :"images/show"
+end
+
+
+post '/images/:id/location' do
+  @country = Country.find_by(name: params[:name])
+  @image = Image.find(params[:id])
+
+  unless @country.nil?
+    @country.images.push(@image)
+    @confirm_add_loca = "You added #{@image.country.name} to this image's location!"
+    erb :'images/show'
+  else
+    status 422
+  end
 end
