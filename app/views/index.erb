@@ -1,34 +1,11 @@
-<h2>World map:</h2>
+<h2>Browse images:</h2>
+<div class="nav-container">
+  <a href="/"><span class="left-arrow">&#60;</span></a>
+  <a href="/"><span class="right-arrow">&#62;</span></a>
 
-<form action="/images/search" method="POST">
-<input type="text" name="tag[name]" placeholder="#something.."/>
-<input type="submit" value="Search"/>
-</form>
-<br />
-<head>
-  <style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 50%;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
-  <div id="map"></div>
-  <script>
-    var map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 37.7749, lng: 122.4194},
-        zoom: 8
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>&callback=initMap"
-  async defer></script>
+  <% @images.each do |image| %>
+    <div class="image-container">
+      <a href="/images/<%= image.id %>"><img class="image" src='<%= image.data.url(:large) %>'></a>
+    </div>
+  <% end %>
+</div>

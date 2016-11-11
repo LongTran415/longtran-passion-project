@@ -1,5 +1,9 @@
+
 $(document).ready(function() {
   $("#comment-form").on('submit', handleCommentPost);
+  // $(".left-arrow").on('click', forward);
+  $(".right-arrow").on('click', backward);
+
 });
 
 function handleCommentPost(evt){
@@ -24,4 +28,9 @@ function handleCommentPost(evt){
   }).fail(function(response){
     console.log("Bad Request, 400")
   })
+}
+
+function backward(evt) {
+  evt.preventDefault();
+
 }

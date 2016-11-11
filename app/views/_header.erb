@@ -1,7 +1,11 @@
+
+<br />
 <% if current_user %>
   <a class='logo' href="/users/<%= current_user.id %> ">profile</a>
-  <a class='logo' href="/">map</a>
+  <a class='logo' href="/map">map</a>
+  <a class='logo' href="/">browse</a>
   <a class='logo' href="/images/search">search</a>
+  <br /><br />
   <div class="log-out-form">
     <form action="/sessions" method="POST">
       <input type="hidden" name="_method" value="DELETE">
