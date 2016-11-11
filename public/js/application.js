@@ -2,8 +2,7 @@
 $(document).ready(function() {
   $("#comment-form").on('submit', handleCommentPost);
   // $(".left-arrow").on('click', forward);
-  $(".right-arrow").on('click', backward);
-
+  // $(".right-arrow").on('click', backward);
 });
 
 function handleCommentPost(evt){

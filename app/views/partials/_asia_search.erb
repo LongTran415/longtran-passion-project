@@ -1,0 +1,39 @@
+<h3>Browse Asia:</h3>
+
+<% if @country_errors %>
+  <%= @country_errors %>
+<% end %>
+
+
+<div class='nav-container'>
+  <a href="/"><span class="left-arrow">&#60;</span></a>
+  <div id="nanoGallery4"></div>
+  <a href="/"><span class="right-arrow">&#62;</span></a>
+</div>
+
+  <script type="text/javascript">
+    $("#nanoGallery4").nanoGallery({
+      paginationDots: true,
+      paginationMaxLinesPerPage: 1,
+      thumbnailWidth:400,
+      thumbnailHeight:600,
+      items: [
+        <% @country.images.each do |image| %>
+          {
+            src: "<%= image.data.url %>",
+            srct: "<%= image.data.url(:large) %>"
+          }
+          <%= "," unless @country.images.last == image %>
+        <% end %>
+      ]
+    });
+
+    $(".left-arrow").on('click', function() {
+      $("#nanoGallery4").nanoGallery('paginationPreviousPage');
+    });
+
+    $(".right-arrow").on('click', function() {
+      $("#nanoGallery4").nanoGallery('paginationNextPage');
+    })
+
+  </script>

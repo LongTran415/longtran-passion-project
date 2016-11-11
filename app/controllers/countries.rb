@@ -1,4 +1,4 @@
 get '/countries/asia' do
-  @country = Country.find_by(name: params[:name])
-  erb :'partials/_images_asia'
+  @country = Country.find_by(name: "Asia")
+  erb :'partials/_asia_search'
 end

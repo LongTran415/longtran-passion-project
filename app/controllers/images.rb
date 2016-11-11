@@ -54,3 +54,17 @@ post '/images/:id/tags' do
   end
   erb :"images/show"
 end
+
+
+post '/images/:id/location' do
+  @country = Country.find_by(name: params[:name])
+  @image = Image.find(params[:id])
+
+  unless @country.nil?
+    @country.images.push(@image)
+    @confirm_add_loca = "You added #{@image.country.name} to this image's location!"
+    erb :'images/show'
+  else
+    status 422
+  end
+end

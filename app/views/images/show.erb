@@ -5,6 +5,16 @@
 <p>
   <a href="/portfolios/<%= @image.portfolio.id %>">back to porfolio</a>
 </p>
+<p>
+  <% if @confrim_add_loca %>
+    <%= @confrim_add_loca %>
+  <% end %>
+  <text style="font-size:14px"><em>add a location</em></text>
+  <form type="text" action="/images/<%= @image.id %>/location" method="post" class="form-box">
+    <input type="text" name="name"  />
+    <input type="submit" value="add location" />
+  </form>
+</p>
 <div class="tag-container">
   <div class="tags">
     <p>
