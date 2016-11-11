@@ -5,6 +5,7 @@ class CreateImages < ActiveRecord::Migration
       t.integer :data_file_size
       t.string :data_content_type
       t.datetime :data_updated_at
+      t.integer :country_id
 
       t.integer :portfolio_id
     end

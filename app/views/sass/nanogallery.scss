@@ -29,11 +29,11 @@
 
 @font-face {
   font-family: 'nano_icon_font3';
-  src: url('./font/nano_icon_font3.eot?8875162');
-  src: url('./font/nano_icon_font3.eot?8875162#iefix') format('embedded-opentype'),
-       url('./font/nano_icon_font3.woff?8875162') format('woff'),
-       url('./font/nano_icon_font3.ttf?8875162') format('truetype'),
-       url('./font/nano_icon_font3.svg?8875162#nano_icon_font3') format('svg');
+  src: url('/font/nano_icon_font3.eot?8875162');
+  src: url('/font/nano_icon_font3.eot?8875162#iefix') format('embedded-opentype'),
+       url('/font/nano_icon_font3.woff?8875162') format('woff'),
+       url('/font/nano_icon_font3.ttf?8875162') format('truetype'),
+       url('/font/nano_icon_font3.svg?8875162#nano_icon_font3') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -342,7 +342,7 @@
 }
 .nanogallery_theme_default .nanoGalleryBreadcrumb .loading:after{
 	content:'\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
-	background:url('loading.gif') no-repeat center;
+	background:url('/loading.gif') no-repeat center;
 }
 
 
@@ -637,7 +637,7 @@
   float: left;
   position: relative;
   top: 50px;
-  background: url(nano_logo.png) #000 no-repeat center;  
+  background: url('/nano_logo.png') #000 no-repeat center;
   display: block;
   height: 30px;
   width: 120px;
@@ -656,7 +656,7 @@
 	-o-transition: all 0.2s ease;
 }
 .nanogallery_theme_default #nanoGalleryViewer .closeButtonFloating:after {
-	color: #ddd; 
+	color: #ddd;
 	background: rgba(0,0,0,0.2);
   padding: 5px 0 5px 5px;
 
@@ -671,7 +671,7 @@
 	text-decoration: inherit;
 	text-align: center;
 	font-variant: normal;
-	text-transform: none;	
+	text-transform: none;
 }
 .nanogallery_theme_default #nanoGalleryViewer  .closeButtonFloating:hover {
 	opacity: 0.3;
@@ -694,7 +694,7 @@
 }
 .nanogallery_theme_default #nanoGalleryViewer .content img{
 	/* never define a margin here */
-  background:url('loading.gif') no-repeat center;
+  background:url('/loading.gif') no-repeat center;
 	border:4px solid #f8f8f8;
 	/*display:block;*/
 	padding:0px;
@@ -714,7 +714,7 @@
 }
 
 .nanogallery_theme_default #nanoGalleryViewer .content .contentAreaPrevious {
-	color: #ddd; 
+	color: #ddd;
 	display:block;
 	position:absolute;
 	top: 50%;
@@ -742,7 +742,7 @@
 }
 
 .nanogallery_theme_default #nanoGalleryViewer .content .contentAreaNext {
-	color: #ddd; 
+	color: #ddd;
 	display:block;
 	position:absolute;
 	top: 50%;
@@ -993,7 +993,7 @@
 	width:50px;
 	height:2px;
 	top:0px;
-  opacity:.7;		
+  opacity:.7;
 }
 .nanogallery_theme_default .nanoGalleryLBar > div:nth-child(1){
   -webkit-animation: nanoGalleryLBarAnim 2s -.2s infinite  cubic-bezier(0, 0.6, 0.9, 0.0);
@@ -1025,7 +1025,7 @@
   -ms-animation: nanoGalleryLBarAnim 2s -.8s infinite  cubic-bezier(0, 0.6, 0.9, 0.0);
   -o-animation: nanoGalleryLBarAnim 2s -.8s infinite  cubic-bezier(0, 0.6, 0.9, 0.0);
   animation: nanoGalleryLBarAnim 2s -.8s infinite  cubic-bezier(0, 0.6, 0.9, 0.0);
-  background: #777; 
+  background: #777;
 }
 .nanogallery_theme_default .nanoGalleryLBar > div:nth-child(5){
   -webkit-animation: nanoGalleryLBarAnim 2s -1s infinite  cubic-bezier(0, 0.6, 0.9, 0.0);

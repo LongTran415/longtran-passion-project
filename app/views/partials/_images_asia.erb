@@ -1,4 +1,10 @@
-<h2>Search:</h2>
+<h3>Browse Asia:</h3>
+
+<% if @country_errors %>
+  <%= @country_errors %>
+<% end %>
+
+h2>Search:</h2>
 
 <input id="pac-input" class="controls" type="text" placeholder="Search Box">
 <div id="map"></div>
@@ -7,12 +13,8 @@
   async defer>
 </script>
 
-<!--
-<ul>
-  <% @images.each do |image| %>
-    <li>
-      <img src="<%= image.data.url(:thumbnail) %>">
-      <p><%= image.data_file_name %></p>
-    </li>
+<div class="Asia">
+  <% @county.images.each do |image| %>
+    <%= image.data.url(:large) %>
   <% end %>
-</ul> -->
+</div>

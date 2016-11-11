@@ -1,29 +1,33 @@
-<h2>World Map:</h2>
-<head>
-  <style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 80%;
-      width: 780px;
+<div id="map-continents">
+ <ul class="continents">
+  <li class="c1"><a href="/countries/africa">Africa</a></li>
+  <li class="c2"><a href="/countries/asia">Asia</a></li>
+  <li class="c3"><a href="#australia">Australia</a></li>
+  <li class="c4"><a href="#europe">Europe</a></li>
+  <li class="c5"><a href="#north-america">North America</a></li>
+  <li class="c6"><a href="#south-america">South America</a></li>
+ </ul>
+</div>
+
+<div id="map">
+
+</div>
+
+
+<script type="text/javascript">
+  $("#map-continents").CSSMap({
+    size: 1450,
+    mapStyle: "vintage",
+    cities: true,
+    tooltips: false,
+    responsive: "auto",
+    multipleClick: {
+      enable: true,
+      searchUrl: "search.php",
+      searchLink: "Search",
+      searchLinkVar: "region",
+      separato: "+",
+      clicksLimit: 0
     }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
-  <div id="map"></div>
-  <script>
-    var map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 37.7749, lng: 122.4194},
-        zoom: 8
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>&callback=initMap"
-  async defer></script>
+  });
+</script>

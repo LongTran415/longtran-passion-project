@@ -14,7 +14,15 @@ post '/images/search' do
 end
 
 post '/images' do
-  @image = Image.create(data: params[:data], portfolio_id: params[:portfolio_id])
+  @image = Image.create(data: params[:data], portfolio_id: params[:portfolio_id], country_id: params[:country_id])
+  @countries = Country.all
+  @countries.each do |country|
+    if country.name == @image.country.name
+      country.images.push(@image)
+    else
+      @country_errors = "Not valid input..."
+    end
+  end
   redirect "/portfolios/#{params[:portfolio_id]}/edit"
 end
 

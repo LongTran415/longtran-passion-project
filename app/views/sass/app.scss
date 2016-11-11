@@ -1,9 +1,10 @@
 @import "normalize";
 @import "nanogallery";
+@import "maps";
 
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 800px;
   padding: 0px 200px 600px 50px;
   border: 1px dotted black;
   font-family: "Courier New", Courier, monospace;
@@ -74,12 +75,12 @@ th {
 }
 
 .nav-container span.right-arrow {
-  top: 200px;
-  right: 180px;
+  top: 300px;
+  right: -10px;
 }
 .nav-container span.left-arrow {
-  top: 200px;
-  left: -40px;
+  top: 300px;
+  left: -20px;
 }
 span.right-arrow {
   content: "\003E";
