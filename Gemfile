@@ -17,7 +17,6 @@ gem 'shotgun'
 gem 'pry'
 gem 'hirb'
 gem 'faker'
-gem 'neat'
 gem "paperclip", "~> 5.0.0"
 
 gem 'sass'

@@ -1,0 +1,17 @@
+<% if current_user %>
+  <ul class="topnav" id="myTopnav">
+    <li><a href="#home">Portfolios</a></li>
+    <li><a href="#news">Browse</a></li>
+    <li><a href="#contact">World Map</a></li>
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </li>
+  </ul>
+<% else %>
+  <ul class="topnav" id="myTopnav">
+    <li><a href="#home">Login</a></li>
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+    </li>
+  </ul>
+<% end %>

@@ -9,17 +9,12 @@
   <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
   <script src="/js/map.js"></script>
   <script src="/js/application.js"></script>
-  <title>World Map</title>
 </head>
 
 <body>
-  <div class="container">
-  <header class='app-bar'>
-    <%= erb :'_header' %>
-  </header>
-
-  <%= yield %>
-</div>
+  <%= erb :'partials/_nav' %>
+  <%= erb :'partials/_body' %>
+  <%= erb :'partials/_footer' %>
 </body>
 
 </html>
