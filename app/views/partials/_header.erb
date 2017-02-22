@@ -1,0 +1,26 @@
+<% if current_user %>
+  <div class="header-wrap">
+    <ul class="topnav" id="myTopnav">
+      <li><a class='logo' href="/users/<%= current_user.id %> ">profile</a></li>
+      <li><a class='logo' href="/map">map</a></li>
+      <li><a class='logo' href="/">browse</a></li>
+      <li><a class='logo' href="/search">search</a></li>
+      <li class="icon"><a href="javascript:void(0);" onclick="dropMenu()">&#9776;</a></li>
+    </ul>
+
+    <div class="log-out-form">
+      <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Logout</button>
+      </form>
+    </div>
+  </div>
+
+<% else %>
+  <div class="header-wrap">
+    <ul class="topnav" id="myTopnav">
+      <li><a class='logo' href="/sessions/new">Login</a></li>
+      <li><a class='logo' href="/users/new">Register</a></li>
+    </ul>
+  </div>
+<% end %>

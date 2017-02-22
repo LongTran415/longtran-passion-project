@@ -12,7 +12,7 @@
 }
 .log-out-form {
   position: absolute;
-  top: 0em;
+  top: 3em;
   right: 1em;
 }
 
@@ -87,6 +87,7 @@ span.left-arrow {
   content: "\003C";
   font-size: 40px;
 }
+
 button {
   background:none!important;
   border:none;
@@ -98,4 +99,76 @@ button {
 }
 
 .location {
+}
+
+
+
+
+
+
+
+.fill-height-or-more {
+  display: flex;
+  flex-direction: column
+}
+
+.fill-height-or-more > div {
+  /* these are the flex items */
+  flex: 1;
+  height:100vh
+}
+body {
+  font-family: 'Inconsolata', serif;
+  font-size: 1em;
+  height:100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  padding: 4px
+}
+.content {
+  height: 100%;
+  font-family: Impact, Charcoal, sans-serif;
+  background-color: #80ffff;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: scroll;
+  text-align: center;
+  background-color: #CCFFFF;
+  border-style: solid;
+  border-color: #FFFAC9;
+  border-width: 20px
+
+}
+.right {
+  float: left;
+  width: 50%;
+  background: black;
+  height: 100%;
+  overflow: scroll;
+  color: white;
+  text-align: center;
+  border-style: solid;
+  border-color: white;
+  border-width: 20px
+}
+
+p {
+  font-family: 'Inconsolata', serif;
+  padding: inherit;
+  padding-left: 2px;
+}
+
+li {
+  font-family: 'Inconsolata', serif;
+  padding: inherit;
+  padding-left: 2px;
+  font-size: 30px;
+  text-align: left;
 }
