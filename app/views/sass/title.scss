@@ -44,19 +44,19 @@
   color: #e6ffff; opacity: 0.8;
   margin: 0;
   position: absolute;
-  top: 66%;
-  left: 70%;
+  top: 62%;
+  left: 65%;
   transform: translate(-50%, -50%);
 }
 
 .logo-2 {
-  font-family: "Inconsolata", serif;
+  font-family: "Inconsolata";
   color: #e6ffff; opacity: 0.2;
-  font-size: 180px;
+  font-size: 11em;
   margin: 0;
   position: absolute;
-  top: 70%;
-  left: 82%;
+  top: 75%;
+  left: 80%;
   transform: translate(-50%, -50%);
 }
 
@@ -65,7 +65,29 @@
   font-family: "Oswald", serif;
   margin: 0;
   position: absolute;
-  top: 80%;
+  top: 78%;
   left: 80%;
   transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 800px) {
+  .logo-1 {
+    position: absolute;
+    font-size: 600%;
+    transform: rotate(90deg) translateY(150px);
+    left: 0;
+    top: 3.5em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .logo-2 {
+    font-size: 800%;
+    transform: translateX(-80%);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .logo-3 {
+    font-size: 200%;
+    transform: translateX(-70%);
+    top: 85%;
+  }
 }

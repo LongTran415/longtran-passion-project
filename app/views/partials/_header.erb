@@ -8,12 +8,13 @@
       <li class="icon"><a href="javascript:void(0);" onclick="dropMenu()">&#9776;</a></li>
     </ul>
 
-    <div class="log-out-form">
-      <form action="/sessions" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <button>Logout</button>
-      </form>
-    </div>
+  </div>
+
+  <div class="log-out-form">
+    <form action="/sessions" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="log-out-button">Logout</button>
+    </form>
   </div>
 
 <% else %>

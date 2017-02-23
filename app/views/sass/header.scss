@@ -1,10 +1,30 @@
+
 .header-wrap {
-    width: 100%;
-    position: fixed;
-    background-color: #e0e0e0;
+  width: 100%;
+  position: fixed;
+  background-color: #e0e0e0;
+  font-family: "Amatic SC";
 }
 
-
+.log-out-form {
+  position: fixed;
+  flex: 1;
+  top: 0.85em;
+  right: 2em;
+}
+.log-out-button {
+  flex: 1;
+  top: 0.85em;
+  right: 2em;
+  position: fixed;
+  background: 0,0,0,0;
+  border: none;
+  font-family: "Amatic SC";
+  text-decoration: underline;
+  font-weight: lighter;
+  color: #e0e0e0;
+  font-size: 1em;
+}
 /* Remove margins and padding from the list, and add a black background color */
 ul.topnav {
     list-style-type: none;
