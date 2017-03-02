@@ -1,17 +1,15 @@
 body::-webkit-scrollbar { display: none; }
 
-#slide-window
-  {
+#slide-window {
   position:relative;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  top:0px;
-  left:0px;
-  }
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
 
-#slides
-  {
+#slides {
   height:100%;
   position:relative;;
   margin:0px;
@@ -22,7 +20,7 @@ body::-webkit-scrollbar { display: none; }
 
   transition: all 0.66s ease; -webkit-transition: all 0.66s ease;
 
-  }
+}
 
 .slide
   {
@@ -91,10 +89,3 @@ body::-webkit-scrollbar { display: none; }
   color:#eaeaea;
   font-family: 'Courier New', Courier, monospace;
   }
-
-.title-h1 {
-  font-family: "Amatic SC";
-  font-size: 3em;
-  font-weight: 100;
-  letter-spacing: .5em;
-}

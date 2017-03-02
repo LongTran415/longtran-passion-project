@@ -1,21 +1,23 @@
 <% if current_user %>
   <section class="some-area fill-height-or-more">
-    <div>
+    <div class="section">
+      <img src="/images/cross_arrow.png" alt="arrow" class="cross-arrow">
+
       <text class="title-h1">Welome back <%= current_user.username %>!</text>
       <a href="default.asp">
         <img src="/images/arrow_small.png" alt="arrow" class="animated infinite flash bounce-arrow">
       </a>
     </div>
 
-    <div>
+    <div class="section">
       <h2><a href="/portfolios/new">Add a Portfolio</a></h2>
     </div>
 
-    <div>
+    <div class="section">
       <h2><a href="/users/<%= current_user.id %>/portfolios">View Portfolios</a></h2>
     </div>
 
-    <div>
+    <div class="section">
       <h2><a href="/">Browse</a></h2>
     </div>
   </section>
