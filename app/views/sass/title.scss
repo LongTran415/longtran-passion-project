@@ -4,12 +4,11 @@
 
 .top-div {
   height: 70%;
-  background-color: black;
   width: 100%;
 }
 .bottom-div {
   height: 30%;
-  background: hsla(200, 50%, 25%, 1);
+  background: linear-gradient(hsla(255, 0, 0, 0), hsla(200, 50%, 13%, 1));
   width: 100%;
 }
 .title {
@@ -70,7 +69,7 @@
     position: absolute;
     font-size: 420%;
     transform: rotate(90deg) translateY(150px);
-    left: 0;
+    left: .5em;
     top: 4.5em;
   }
 }
@@ -79,4 +78,41 @@
   font-size: 3em;
   font-weight: 100;
   letter-spacing: .5em;
+}
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.long-arrow {
+  position: relative;
+  left: 0;
+  max-width: 25%;
+  transform: rotate(90deg);
+  margin: 22em auto -4em -5.5em;
+}
+
+@media only screen and (max-width: 800px) {
+  .long-arrow {
+    max-width: 60%;
+    position: relative;
+    transform: rotate(90deg);
+    margin: 20em 0 0 -10em;
+
+  }
 }
