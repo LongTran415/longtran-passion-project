@@ -1,13 +1,22 @@
-  <h1><em>World</em><b>porfolio</b></h1>
-  <% if current_user %>
-  <h1>Welcome!</h1>
-    <h2><%= current_user.username %>'s portfolio menu:</h2>
-  <ul>
-    <li><a href="/portfolios/new">Add a Portfolio</a></li>
-    <li><a href="/users/<%= current_user.id %>/portfolios">View Portfolios</a></li>
-    <li><a href="/">Browse</a></li>
-    <% if @error %>
-      <li> <%= @error %></li>
-    <% end %>
-  </ul>
-  <% end %>
+<% if current_user %>
+  <section class="some-area fill-height-or-more">
+    <div>
+      <text class="title-h1">Welome back <%= current_user.username %>!</text>
+      <a href="default.asp">
+        <img src="/images/arrow_small.png" alt="arrow" class="animated infinite flash bounce-arrow">
+      </a>
+    </div>
+
+    <div>
+      <h2><a href="/portfolios/new">Add a Portfolio</a></h2>
+    </div>
+
+    <div>
+      <h2><a href="/users/<%= current_user.id %>/portfolios">View Portfolios</a></h2>
+    </div>
+
+    <div>
+      <h2><a href="/">Browse</a></h2>
+    </div>
+  </section>
+<% end %>

@@ -1,4 +1,7 @@
  // using bourbon api
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/animate/animate";
+
 @import "normalize";
 
 // CSSmaps api
@@ -12,3 +15,5 @@
 @import "header";
 @import "project";
 @import "title";
+@import "portfolio";
+@import "bounce";

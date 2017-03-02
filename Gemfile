@@ -34,3 +34,4 @@ end
 group :test, :development do
   gem 'factory_girl'
 end
+gem 'font-awesome-sass'
