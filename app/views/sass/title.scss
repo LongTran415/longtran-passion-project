@@ -1,13 +1,12 @@
 .title-container {
   height: 100%;
 }
-
 .top-div {
-  height: 70%;
+  height: 60%;
   width: 100%;
 }
 .bottom-div {
-  height: 30%;
+  height: 40%;
   background: linear-gradient(hsla(255, 0, 0, 0), hsla(200, 50%, 13%, 1));
   width: 100%;
 }
@@ -52,14 +51,14 @@
 }
 
 .logo-1 {
-  font-size: 6em;
+  font-size: 7em;
   font-family: "Amatic SC";
   letter-spacing: .3em;
   color: #e6ffff; opacity: 0.8;
   margin: 0;
   position: absolute;
-  top: 60%;
-  left: 40%;
+  top: 82%;
+  left: 45%;
   transform: translate(-50%, -50%);
 }
 
@@ -100,11 +99,12 @@
 }
 
 .long-arrow {
+  background: (0 0 0 0);
   position: relative;
   left: 0;
   max-width: 25%;
   transform: rotate(90deg);
-  margin: 22em auto -4em -5.5em;
+  margin: 26em auto -6em -7em;
 }
 
 @media only screen and (max-width: 800px) {
@@ -112,7 +112,52 @@
     max-width: 60%;
     position: relative;
     transform: rotate(90deg);
-    margin: 20em 0 0 -10em;
+    margin: 20em 0 0 -11em;
 
   }
+}
+
+.light-1 {
+  position: fixed;
+  max-width: 100%;
+  max-height: 50%;
+  margin: 0 0 0 13.5em;
+
+}
+
+.light-2 {
+  position: fixed;
+  max-width: 80%;
+  max-height: 30%;
+  margin: 0 0 0 26em;
+
+}
+
+.light-3 {
+  position: fixed;
+  max-width: 80%;
+  max-height: 30%;
+  margin: 0 0 0 45em;
+
+}
+.light-red {
+  position: fixed;
+  max-width: 80%;
+  max-height: 70%;
+  margin: 0 0 0 34em;
+
+}
+.light-4 {
+  position: fixed;
+  max-width: 80%;
+  max-height:55%;
+  margin: 0 0 0 60em;
+
+}
+.small-arrows {
+  position: relative;
+  left: 0;
+  max-width: 5%;
+  transform: rotate(90deg);
+  margin: 22em auto -4em -5.5em;
 }

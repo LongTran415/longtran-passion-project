@@ -60,6 +60,23 @@ function handleWebClick(evt){
   // $("body").animate({ scrollTop: 0 }, 200 );
 }
 
+// title arrow link
+$(document).ready(function() {
+  $(".long-arrow").on('click', handleArrowClick);
+});
+
+function handleArrowClick(evt){
+  evt.preventDefault();
+
+  $(".long-arrow").click(function() {
+    var topPosition = $(".content").position().top;
+    $("body").animate({ scrollTop: topPosition }, "slow");
+
+    return false;
+  });
+  // $("body").animate({ scrollTop: 0 }, 200 );
+}
+
 // nav-scroll
 var previousScroll = 0,
     headerOrgOffset = $('.topnav').height();

@@ -9,6 +9,7 @@
  */
 
 .animated {
+  -webkit-transform: translateZ(0);
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
