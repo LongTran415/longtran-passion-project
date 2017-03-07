@@ -4,6 +4,10 @@ $.global.item = 1;
 $.global.total = 0;
 
 $(document).ready(function() {
+  $(".logo-1").on('click', handleWebClick);
+  $(".long-arrow").on('click', handleArrowClick);
+  $(".bounce-arrow").on('click', handleBounceArrowClick);
+
   var WindowWidth = $(window).width();
   var SlideCount = $('#slides li').length;
   var SlidesWidth = SlideCount * WindowWidth;
@@ -41,13 +45,6 @@ function DoIt(target) {
   $('#count').html($.global.item+1);
 }
 
-
-
-// inspiration link
-$(document).ready(function() {
-  $(".logo-1").on('click', handleWebClick);
-});
-
 function handleWebClick(evt){
   evt.preventDefault();
 
@@ -60,10 +57,6 @@ function handleWebClick(evt){
   // $("body").animate({ scrollTop: 0 }, 200 );
 }
 
-// title arrow link
-$(document).ready(function() {
-  $(".long-arrow").on('click', handleArrowClick);
-});
 
 function handleArrowClick(evt){
   evt.preventDefault();
@@ -76,6 +69,18 @@ function handleArrowClick(evt){
   });
   // $("body").animate({ scrollTop: 0 }, 200 );
 }
+
+function handleBounceArrowClick(evt){
+  evt.preventDefault();
+
+  $(".bounce-arrow").click(function() {
+    var topPosition = $(".app-bar").position().top;
+    $("body").animate({ scrollTop: topPosition }, "slow");
+
+    return false;
+  });
+}
+
 
 // nav-scroll
 var previousScroll = 0,

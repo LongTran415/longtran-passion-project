@@ -89,3 +89,8 @@ body::-webkit-scrollbar { display: none; }
   color:#eaeaea;
   font-family: 'Courier New', Courier, monospace;
   }
+
+.slide-1, .slide-2, .slide-3, .slide-4 {
+  max-width: 60%;
+  margin: 2em 0 0 0;
+}

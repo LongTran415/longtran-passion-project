@@ -17,13 +17,49 @@
    justify-content: center;
    align-items: center;
    color: #f8f8f8;
-   font-family: "Raleway" serif;
-   > .section {
-     // also flex items
+   font-family: "Amatic SC";
+
+   > .section, a {
+     text-decoration: none;
    }
  }
 }
+.add-portfolio {
+  font-size: 6em;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+  text-shadow: 2px 2px hsla(67, 77%, 62%, 0.75);
+  position: relative;
+  z-index: 1;
+}
 
+.creative-image {
+  max-width: 65%;
+  position: absolute;
+  z-index: -1;
+  margin: -22em 0 -2em;
+  opacity: .3;
+}
+/* unvisited link */
+.add-portfolio:link {
+    color: red;
+}
+
+/* visited link */
+.add-portfolio:visited {
+    color: hsla(200, 50%, 25%, 1);
+}
+
+/* mouse over link */
+.add-portfolio:hover {
+    color: hsla(175, 88%, 29%, 0.75);
+}
+
+/* selected link */
+.add-portfolio:active {
+    color: blue;
+}
 .some-area {
  > .section {
    padding: 1rem;
@@ -53,7 +89,7 @@
     }
    }
    &:nth-child(2) {
-     background: hsla(200, 50%, 70%, 1);
+     background: hsla(180, 50%, 50%, 0.37);
    }
    &:nth-child(3) {
      background: hsla(200, 50%, 75%, 1);
