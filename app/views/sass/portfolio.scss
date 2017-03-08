@@ -25,7 +25,7 @@
  }
 }
 .add-portfolio {
-  font-size: 6em;
+  font-size: 7em;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
@@ -35,20 +35,27 @@
 }
 
 .creative-image {
-  max-width: 65%;
+  max-width: 50%;
   position: absolute;
   z-index: -1;
-  margin: -22em 0 -2em;
+  margin: -24em -16em 24em 16em;
   opacity: .3;
+}
+
+.pencil-image {
+  max-width: 80%;
+  position: absolute;
+  opacity: .3;
+  margin: -4em -14em auto 10em
 }
 /* unvisited link */
 .add-portfolio:link {
-    color: red;
+    color: hsla(200, 50%, 25%, 1);
 }
 
 /* visited link */
 .add-portfolio:visited {
-    color: hsla(200, 50%, 25%, 1);
+    color: hsla(175, 88%, 29%, 0.75);
 }
 
 /* mouse over link */
@@ -58,7 +65,7 @@
 
 /* selected link */
 .add-portfolio:active {
-    color: blue;
+    color: hsla(200, 50%, 25%, 1);
 }
 .some-area {
  > .section {
@@ -92,15 +99,21 @@
      background: hsla(180, 50%, 50%, 0.37);
    }
    &:nth-child(3) {
-     background: hsla(200, 50%, 75%, 1);
+     background: #f4ff9e;
    }
-   &:nth-child(4) {
-     background: hsla(200, 50%, 80%, 1);
-   }
-
    h1, h2 {
      margin: 0 0 0.2rem 0;
    }
 
  }
+}
+.view {
+  text-shadow: 2px 2px #0e9a1f;
+}
+.long-arrow-2 {
+  background: (0 0 0 0);
+  position: relative;
+  max-width: 70%;
+  transform: rotate(90deg);
+  margin: -8em -25em 8em 25em;
 }
