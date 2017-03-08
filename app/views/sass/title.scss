@@ -51,13 +51,13 @@
 }
 
 .logo-1 {
-  font-size: 7em;
+  font-size: 8em;
   font-family: "Amatic SC";
   letter-spacing: .3em;
   color: #e6ffff; opacity: 0.8;
   margin: 0;
   position: absolute;
-  top: 82%;
+  top: 75%;
   left: 45%;
   transform: translate(-50%, -50%);
 }
@@ -81,7 +81,7 @@
 
 
 .fullscreen-bg {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;

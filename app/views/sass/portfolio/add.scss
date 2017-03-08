@@ -1,0 +1,82 @@
+.add-container {
+  height: 100%;
+  margin: 0;
+}
+.right {
+  float: right;
+  width: 72%;
+  background: #DAE6E6;
+  height: 100%;
+  overflow: hidden;
+
+}
+.left {
+  float: left;
+  width: 28%;
+  background: #B5CABA;
+  height: 100%;
+  overflow: scroll;
+}
+
+* {margin: 0; padding: 0;}
+
+.list-container {
+  padding-top: 3em;
+  font-family: "Amatic SC";
+}
+.add-content {
+  padding-top: 3em;
+  padding-left: 1.5em;
+  font-family: "Amatic SC";
+}
+ul {
+  list-style-type: none;
+  max-width: 100%;
+}
+
+h3 {
+  font-family: "Amatic SC";
+  text-decoration: none;
+  font-size: 2em;
+  /* unvisited link */
+  a:link {
+      color: hsla(200, 50%, 25%, 1);
+  }
+
+  /* visited link */
+  a:visited {
+      color: hsla(175, 88%, 29%, 0.75);
+  }
+
+  /* mouse over link */
+  a:hover {
+      color: hsla(175, 88%, 29%, 0.75);
+  }
+
+  /* selected link */
+  a:active {
+      color: hsla(200, 50%, 25%, 1);
+  }
+}
+
+li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.port-img {
+  max-width: 60%;
+}

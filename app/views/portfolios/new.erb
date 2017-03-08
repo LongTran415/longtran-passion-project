@@ -1,23 +1,35 @@
-<h1>Add a portfolio:</h1>
+<div class="add-container">
+  <div class="right">
+    <div class="add-content">
+      <h1>Add a portfolio:</h1>
 
-<div id="form-container">
-  <form id="porfolio-form" method="post" action="/portfolios">
-    <input type="text" name="title" placeholder="title here"/>
-    <br>
+      <div id="form-container">
+        <form id="porfolio-form" method="post" action="/portfolios">
+          <input type="text" name="title" placeholder="title here"/>
+          <br>
 
-    <input type="submit" value="create">
-  </form>
+          <input type="submit" value="create">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="left">
+    <div class="list-container">
+      <% @portfolio.user.portfolios.each do |portfolio|%>
+        <ul>
+          <li>
+            <img src="/images/fashion-1.jpg" class="port-img" />
+            <h3>
+              <a href="/portfolios/<%= portfolio.id %>"><li><%= portfolio.title %></li></a>
+              <form action="/portfolios/<%= portfolio.id%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="delete">
+              </form>
+            </h3>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<p>
-  <h2>collection:</h2>
-  <ul>
-    <% @portfolio.user.portfolios.each do |portfolio|%>
-      <a href="/portfolios/<%= portfolio.id %>"><li><%= portfolio.title %></li></a>
-      <form action="/portfolios/<%= portfolio.id%>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="delete">
-      </form>
-    <% end %>
-  </u>
-</p>
