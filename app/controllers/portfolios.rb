@@ -21,7 +21,7 @@ end
 
 post '/portfolios' do
   @portfolio = Portfolio.create(title: params[:title], user_id: session[:id])
-  redirect "/portfolios/#{@portfolio.id}"
+  redirect "/portfolios/new"
 end
 
 delete '/portfolios/:id' do
