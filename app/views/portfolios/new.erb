@@ -17,9 +17,11 @@
   <div class="left">
     <div class="list-container">
       <% @portfolio.user.portfolios.each do |portfolio|%>
+      <% portfolio.images.each do |img| %>
         <ul>
           <li>
-            <img src="/images/fashion-1.jpg" class="port-img" />
+            <img src="<%= img.data.url(:thumbnail) %>">
+            <% end %>
             <h3>
               <a href="/portfolios/<%= portfolio.id %>"><li><%= portfolio.title %></li></a>
               <form action="/portfolios/<%= portfolio.id%>" method="post">

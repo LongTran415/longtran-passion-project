@@ -1,6 +1,5 @@
 get '/portfolios/new' do
-  @images = Image.all.limit(3)
-
+  @portfolios = Portfolio.all
   @portfolio = Portfolio.new(user_id: current_user.id)
   erb :'/portfolios/new'
 end
