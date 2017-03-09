@@ -5,6 +5,7 @@
       <img src='<%= @image.data.url(:large) %>'>
     </div>
     <a href="/portfolios/<%= @image.portfolio.id %>">back to porfolio</a>
+
   </div>
 
   <div class="right">
@@ -30,6 +31,25 @@
         <input type="submit" value="tag!" />
       </form>
     </div>
+
+    <div class="comments">
+      <form action="/comments" method="POST" id="comment-form">
+        <input type="hidden" name="comment[image_id]" value="<%= @image.id %>">
+        <textarea name="comment[body]" placeholder="Enter text here..." form="comment-form"></textarea>
+        <input id="comment" type="submit" value="comment">
+      </form>
+    </div>
+
+    <h2>comments:</h2>
+    <div id="comments">
+      <% @image.comments.each do |comment| %>
+        <p>
+          <header><%= comment.author %></header>
+          <%= comment.body %>
+        </p>
+      <% end %>
+    </div>
+
   </div>
 
 </div>

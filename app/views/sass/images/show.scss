@@ -13,9 +13,10 @@
     align-items: center;
 
     img {
+      max-height: 100%;
       margin-bottom: 1em;
-      margin-top: 2em;
-      margin-left: 2em;
+      margin-top: 4em;
+      margin-left: 12em;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     a {
@@ -31,6 +32,23 @@
     padding: 1em;
     background: #1b2a2d;
     color: #BEC67A;
+
+    .comments {
+      margin: 0;
+      display: flex;
+
+        #comment {
+          flex-direction: row;
+          margin-top: 6em;
+        }
+      textarea {
+        width: 25em;
+        height: 10em;
+        margin-top: -6em;
+        margin-left: -4em;
+        margin-right: -16em;
+      }
+    }
 
     .tag-container {
       a {
@@ -49,28 +67,6 @@
           letter-spacing: .2em;
           height: 3em;
         }
-      }
-
-      input[type='submit']{
-        display: flex;
-        margin-left: 1em;
-        font-family: "Amatic SC";
-        background:none;
-        border:none;
-        font-size: 1.5em;
-        color: #5ec;
-        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-        background: #7A7C6A;
-      }
-
-      form {
-        max-width: 100%;
-        width: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
-        margin-left: 2.5em;
       }
 
       @media only screen and (max-width: 300px) {
