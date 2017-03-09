@@ -71,7 +71,7 @@
  > .section {
    padding: 1rem;
    &:nth-child(1) {
-     background: hsla(200, 50%, 25%, 1);
+     background: linear-gradient(#18363F, #5D8C99);
 
      .cross-arrow{
        max-width: 15%;

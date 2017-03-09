@@ -17,7 +17,9 @@
     background: rgba(218, 229, 230, .5);
 
     .brain {
-      margin-left: 15em;
+      max-height: 80%;
+      margin-top: 2em;
+      margin-left: 6em;
       opacity: .7;
       position: absolute;
       z-index: -1;
@@ -30,6 +32,7 @@
       padding-left: .5em;
       font-family: "Amatic SC";
       font-size: 3em;
+      text-shadow: 2px 2px #BEC67A;
     }
 
     input[type='text'] {

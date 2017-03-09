@@ -1,0 +1,67 @@
+.portfolio-edit {
+  display: flex;
+  height: 100%;
+  overflow: scroll;
+  font-family: "Amatic SC";
+
+  .right {
+    flex: 3;
+    padding: 2em;
+    background: rgba(218, 229, 230, .5);
+    margin-bottom: -5em;
+
+    h1 {
+      letter-spacing: 1px;
+      color: #0B2433;
+      padding-top: .5em;
+      padding-left: .5em;
+      font-family: "Amatic SC";
+      font-size: 3em;
+      text-shadow: 2px 2px #BEC67A;
+    }
+
+    a {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+  }
+
+  input[type='text'] {
+    height: 2.5em;
+    width: 25em;
+    border: 3px;
+    border-radius: 4px;
+    margin-left: 1em;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #dedede;
+      text-align: center;
+      letter-spacing: .2em;
+      height: 3em;
+    }
+  }
+
+  input[type='submit']{
+    display: flex;
+    margin-left: 1em;
+    font-family: "Amatic SC";
+    background:none;
+    border:none;
+    font-size: 1.5em;
+    color: #5ec;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    background: #7A7C6A;
+  }
+
+  form {
+    max-width: 100%;
+    width: 40%;
+    display: flex;
+    padding: 1em;
+  }
+  @media only screen and (max-width: 300px) {
+    form {
+      max-width: 100%
+    }
+  }
+}
