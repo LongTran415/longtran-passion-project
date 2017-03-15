@@ -1,34 +1,11 @@
-<h2>Browse images:</h2>
-<div class='nav-container'>
-  <a href="/"><span class="left-arrow">&#60;</span></a>
-  <div id="nanoGallery4"></div>
-  <a href="/"><span class="right-arrow">&#62;</span></a>
-</div>
+<section class="fill-height-or-more">
+  <div class="title">
+    <%= erb :'partials/_title' %>
+  </div>
 
-
-<script type="text/javascript">
-  $("#nanoGallery4").nanoGallery({
-    paginationDots: true,
-    paginationMaxLinesPerPage: 1,
-    thumbnailWidth:400,
-    thumbnailHeight:600,
-    items: [
-      <% @images.each do |image| %>
-        {
-          src: "<%= image.data.url %>",
-          srct: "<%= image.data.url(:large) %>"
-        }
-        <%= "," unless @images.last == image %>
-      <% end %>
-    ]
-  });
-
-  $(".left-arrow").on('click', function() {
-    $("#nanoGallery4").nanoGallery('paginationPreviousPage');
-  });
-
-  $(".right-arrow").on('click', function() {
-    $("#nanoGallery4").nanoGallery('paginationNextPage');
-  })
-
-</script>
+  <div class="web-1">
+    <div class="content">
+      <%= erb :'partials/_project' %>
+    </div>
+  </div>
+</section>

@@ -1,10 +1,15 @@
-<div id="portfolios-show">
-  <h1><%= @portfolio.title %></h1>
-  <h3><a class='edit' href="/portfolios/<%= @portfolio.id %>/edit">Edit this portfoilo</a></h3>
+<div class="portfolio-show">
+  <div class="right">
+    <h1><%= @portfolio.title %></h1>
+    <h3>
+      <a class='edit' href="/portfolios/<%= @portfolio.id %>/edit">Edit this portfoilo</a>
+    </h3>
 
-  <div id="image-container">
-    <% @portfolio.images.each do |image| %>
+    <div id="image-container">
+      <% @portfolio.images.each do |image| %>
       <a href="/images/<%= image.id %>"><img src='<%= image.data.url(:medium) %>'></a>
-    <% end %>
+      <% end %>
+    </div>
+    <a href="/portfolios/new">back to your portfolios</a>
   </div>
 </div>

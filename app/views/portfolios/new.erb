@@ -1,23 +1,39 @@
-<h1>Add a portfolio:</h1>
+<div class='portfolio-new'>
 
-<div id="form-container">
-  <form id="porfolio-form" method="post" action="/portfolios">
-    <input type="text" name="title" placeholder="title here"/>
-    <br>
-
-    <input type="submit" value="create">
-  </form>
-</div>
-
-<p>
-  <h2>collection:</h2>
-  <ul>
+  <!-- left -->
+  <div class='left'>
     <% @portfolio.user.portfolios.each do |portfolio|%>
-      <a href="/portfolios/<%= portfolio.id %>"><li><%= portfolio.title %></li></a>
-      <form action="/portfolios/<%= portfolio.id%>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="delete">
-      </form>
+      <% img = portfolio.images.first %>
+      <div class='portfolio'>
+
+        <% if img.nil? %>
+          <div class='placeholder'> </div>
+        <% else %>
+          <img src="<%= img.data.url(:thumbnail) %>">
+        <% end %>
+
+        <div class='portfolio-nav'>
+          <a href="/portfolios/<%= portfolio.id %>"> <%= portfolio.title %> </a>
+          <div class='spring'> </div>
+          <form class="delete-form" action="/portfolios/<%= portfolio.id%>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input class="button" type="submit" value="delete" id="delete">
+          </form>
+        </div>
+      </div>
     <% end %>
-  </u>
-</p>
+  </div>
+
+  <!-- right -->
+  <div class='right'>
+    <img class="brain animated infinite pulse" src="/images/brain.png"/>
+
+    <h1>Add a portfolio</h1>
+
+    <form id="porfolio-form" method="post" action="/portfolios">
+      <input type="text" name="title" placeholder="title here" class="create-form"/>
+      <input type="submit" value="create" id="submit">
+    </form>
+  </div>
+
+</div>

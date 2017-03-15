@@ -1,38 +1,113 @@
+$.global = new Object();
+
+$.global.item = 1;
+$.global.total = 0;
 
 $(document).ready(function() {
-  $("#comment-form").on('submit', handleCommentPost);
-  $(".left-arrow").on('click', forward);
-  $(".right-arrow").on('click', backward);
+  $(".logo-1").on('click', handleWebClick);
+  $(".long-arrow").on('click', handleArrowClick);
+  $(".bounce-arrow").on('click', handleBounceArrowClick);
+
+  var WindowWidth = $(window).width();
+  var SlideCount = $('#slides li').length;
+  var SlidesWidth = SlideCount * WindowWidth;
+
+  $.global.item = 0;
+  $.global.total = SlideCount;
+
+  $('.slide').css('width',WindowWidth+'px');
+  $('#slides').css('width',SlidesWidth+'px');
+  $("#slides li:nth-child(1)").addClass('alive');
+
+  $('#left').click(function() { Slide('back'); });
+  $('#right').click(function() { Slide('forward'); });
 });
 
-function handleCommentPost(evt){
-  evt.preventDefault();
+function Slide(direction) {
+  if (direction == 'back') { var $target = $.global.item - 1; }
+  if (direction == 'forward') { var $target = $.global.item + 1; }
 
-  var form = $(this);
-  var url = form.attr("action");
-
-  $.ajax({
-    url:    url,
-    method: "POST",
-    data:   form.serialize()
-  }).done(function(response){
-    // Create the comment DOM
-    var header = $("<header>").text(response.author);
-    var body = $("<p>").append(response.body);
-    body.prepend(header);
-
-    // Insert into the existing DOM
-    $('#comments').prepend(body);
-    $(form).trigger('reset')
-  }).fail(function(response){
-    console.log("Bad Request, 400")
-  })
+  if ($target == -1) { DoIt($.global.total-1); }
+  else if ($target == $.global.total) { DoIt(0); }
+  else { DoIt($target); }
 }
 
-function forward(evt){
-  evt.preventDefault();
+function DoIt(target) {
+  var $windowwidth = $(window).width();
+  var $margin = $windowwidth * target;
+  var $actualtarget = target+1;
+
+  $("#slides li:nth-child("+$actualtarget+")").addClass('alive');
+  $('#slides').css('transform','translate3d(-'+$margin+'px,0px,0px)');
+
+  $.global.item = target;
+
+  $('#count').html($.global.item+1);
 }
 
-function backward(evt){
+function handleWebClick(evt){
   evt.preventDefault();
+
+  $(".logo-1").click(function() {
+    var topPosition = $(".content").position().top;
+    $("body").animate({ scrollTop: topPosition }, "slow");
+
+    return false;
+  });
+  // $("body").animate({ scrollTop: 0 }, 200 );
 }
+
+
+function handleArrowClick(evt){
+  evt.preventDefault();
+
+  $(".long-arrow").click(function() {
+    var topPosition = $(".content").position().top;
+    $("body").animate({ scrollTop: topPosition }, "slow");
+
+    return false;
+  });
+  // $("body").animate({ scrollTop: 0 }, 200 );
+}
+
+function handleBounceArrowClick(evt){
+  evt.preventDefault();
+
+  $(".bounce-arrow").click(function() {
+    var topPosition = $(".app-bar").position().top;
+    $("body").animate({ scrollTop: topPosition }, "slow");
+
+    return false;
+  });
+}
+
+
+// nav-scroll
+var previousScroll = 0,
+    headerOrgOffset = $('.topnav').height();
+
+$(window).scroll(function () {
+    var currentScroll = $(this).scrollTop();
+    if (currentScroll > headerOrgOffset) {
+        if (currentScroll > previousScroll) {
+            $('.header-wrap').fadeOut();
+        } else {
+            $('.header-wrap').fadeIn();
+        }
+    } else {
+            $('.header-wrap').fadeIn();
+    }
+    previousScroll = currentScroll;
+});
+
+// navigation
+function dropMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+//  slides

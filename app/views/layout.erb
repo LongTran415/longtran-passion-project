@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="/cssmap-continents/cssmap-continents.css">
-  <link rel="stylesheet" href="/css/app.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="/js/jquery.magnific-popup.min.js"></script>
-  <script src="/js/jquery.nanogallery.js"></script>
-  <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
-  <script src="/js/map.js"></script>
-  <script src="/js/application.js"></script>
-  <title>World Map</title>
-</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pangolin">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amatic SC">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="/cssmap-continents/cssmap-continents.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/jquery.nanogallery.js"></script>
+    <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+    <script src="/js/map.js"></script>
+    <script src="/js/application.js"></script>
+    <title>World Map</title>
+  </head>
 
-<body>
-  <div class="container">
-  <header class='app-bar'>
-    <%= erb :'_header' %>
-  </header>
 
-  <%= yield %>
-</div>
-</body>
-
+  <body>
+    <header class='app-bar'>
+      <%= erb :'partials/_header' %>
+    </header>
+    <%= yield %>
+  </body>
 </html>

@@ -1,56 +1,55 @@
-<div class="page-image">
-  <img src='<%= @image.data.url(:large) %>'>
-</d>
+<div class="images-show">
 
-<p>
-  <a href="/portfolios/<%= @image.portfolio.id %>">back to porfolio</a>
-</p>
-
-<div class="location">
-  <p>
-    <% if @confrim_add_loca %>
-      <%= @confrim_add_loca %>
-    <% end %>
-    <text style="font-size:14px"><em>add a location</em></text>
-    <form type="text" action="/images/<%= @image.id %>/location" method="post" class="form-box">
-      <input type="text" name="name"  />
-      <input type="submit" value="add location" />
-    </form>
-  </p>
-</div>
-  
-  <div class="tag-container">
-    <div class="tags">
-      <p>
-        <% @image.tags.each do |tag| %>
-        <a href="/tags/<%= tag.id %>/images" style="font-size:15px"><%= tag.name %></a>
-        <% end %>
-      </p>
+  <div class="left">
+    <div class="page-image">
+      <img src='<%= @image.data.url(:large) %>'>
     </div>
+    <a href="/portfolios/<%= @image.portfolio.id %>">back to porfolio</a>
+
   </div>
 
-<text style="font-size:14px"><em>tags must start with a #</em></text>
-<form type="text" action="/images/<%= @image.id%>/tags" method="post" class="form-box">
-  <input type="text" name="tag[name]"  />
-  <input type="submit" value="tag!" />
-</form>
-<br /><br />
-<form action="/comments" method="POST" id="comment-form">
-  <input type="hidden" name="comment[image_id]" value="<%= @image.id %>">
-  <textarea rows="4" cols="50" name="comment[body]" placeholder="Enter text here..." form="comment-form"></textarea>
-  <input type="submit" value="comment">
-</form>
+  <div class="right">
+    <div class="location-form">
+      <% if @confrim_add_loca %>
+        <%= @confrim_add_loca %>
+      <% end %>
+      <text>add a location</text>
+      <form type="text" action="/images/<%= @image.id %>/location" method="post" class="form-box">
+        <input type="text" name="name"  />
+        <input type="submit" value="add" />
+      </form>
+    </div>
 
-<br /><br />
-<a href="/">back to entries</a>
-</div>
+    <div class="tag-container">
+      <% @image.tags.each do |tag| %>
+        <a href="/tags/<%= tag.id %>/images"><%= tag.name %></a>
+      <% end %>
 
-<h2>comments:</h2>
-<div id="comments">
-  <% @image.comments.each do |comment| %>
-    <p>
-      <header><%= comment.author %></header>
-      <%= comment.body %>
-    </p>
-  <% end %>
+      <p><em>tags must start with a #</em></p>
+      <form type="text" action="/images/<%= @image.id%>/tags" method="post" class="form-box">
+        <input type="text" name="tag[name]"  />
+        <input type="submit" value="tag!" />
+      </form>
+    </div>
+
+    <div class="comments">
+      <form action="/comments" method="POST" id="comment-form">
+        <input type="hidden" name="comment[image_id]" value="<%= @image.id %>">
+        <textarea name="comment[body]" placeholder="Enter text here..." form="comment-form"></textarea>
+        <input id="comment" type="submit" value="comment">
+      </form>
+    </div>
+
+    <h2>comments:</h2>
+    <div id="comments">
+      <% @image.comments.each do |comment| %>
+        <p>
+          <header><%= comment.author %></header>
+          <%= comment.body %>
+        </p>
+      <% end %>
+    </div>
+
+  </div>
+
 </div>

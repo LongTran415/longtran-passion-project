@@ -1,4 +1,5 @@
 get '/portfolios/new' do
+  @portfolios = Portfolio.all
   @portfolio = Portfolio.new(user_id: current_user.id)
   erb :'/portfolios/new'
 end
@@ -20,7 +21,7 @@ end
 
 post '/portfolios' do
   @portfolio = Portfolio.create(title: params[:title], user_id: session[:id])
-  redirect "/portfolios/#{@portfolio.id}"
+  redirect "/portfolios/new"
 end
 
 delete '/portfolios/:id' do

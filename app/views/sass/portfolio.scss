@@ -1,0 +1,119 @@
+.fill-height-or-more {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+ > .section {
+   // these are flex items
+
+   // flex: 1; same as:
+   // flex-grow: 1;
+   // flex-shrink: 1;
+   // flex-basis: auto;
+   // flex: 1 1 auto;
+   flex: 1;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #f8f8f8;
+   font-family: "Amatic SC";
+
+   > .section, a {
+     text-decoration: none;
+   }
+ }
+}
+.add-portfolio {
+  font-size: 7em;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+  text-shadow: 2px 2px hsla(67, 77%, 62%, 0.75);
+  position: relative;
+  z-index: 1;
+}
+
+.creative-image {
+  max-width: 50%;
+  position: absolute;
+  z-index: -1;
+  margin: -24em -16em 24em 16em;
+  opacity: .3;
+}
+
+.pencil-image {
+  max-width: 80%;
+  position: absolute;
+  opacity: .3;
+  margin: -4em -16em auto 10em
+}
+/* unvisited link */
+.add-portfolio:link {
+    color: hsla(200, 50%, 25%, 1);
+}
+
+/* visited link */
+.add-portfolio:visited {
+    color: hsla(175, 88%, 29%, 0.75);
+}
+
+/* mouse over link */
+.add-portfolio:hover {
+    color: hsla(175, 88%, 29%, 0.75);
+}
+
+/* selected link */
+.add-portfolio:active {
+    color: hsla(200, 50%, 25%, 1);
+}
+.some-area {
+ > .section {
+   padding: 1rem;
+   &:nth-child(1) {
+     background: linear-gradient(#18363F, #5D8C99);
+
+     .cross-arrow{
+       max-width: 15%;
+       margin: -8em auto 1em auto;
+     }
+     .bounce-arrow {
+       position: relative;
+       max-height: 100%;
+       left: 42%;
+       max-width: 15%;
+       height: auto;
+       padding: 0;
+       transform: rotate(270deg);
+       margin: 8em auto -8em auto;
+
+     }
+     @media(min-width: 800px) {
+      top: 50%;
+      left: 0;
+      max-height: none;
+      width: 100%;
+    }
+   }
+   &:nth-child(2) {
+     background: hsla(180, 50%, 50%, 0.37);
+   }
+   &:nth-child(3) {
+     background: #f4ff9e;
+   }
+   h1, h2 {
+     margin: 0 0 0.2rem 0;
+   }
+
+ }
+}
+.view {
+  text-shadow: 2px 2px #0e9a1f;
+}
+.long-arrow-2 {
+  background: (0 0 0 0);
+  position: relative;
+  max-width: 70%;
+  transform: rotate(90deg);
+  margin: -6em -25em 8em 25em;
+}

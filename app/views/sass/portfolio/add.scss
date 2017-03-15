@@ -1,0 +1,126 @@
+.portfolio-new {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Amatic SC";
+
+  .left {
+    width: 15em;
+    background: linear-gradient(#18363F, #5D8C99);
+    padding: 3em 1em;
+    overflow: scroll;
+  }
+
+  .right {
+    flex: 3;
+    padding: 2em;
+    background: rgba(218, 229, 230, .5);
+
+    .brain {
+      max-height: 80%;
+      margin-top: 2em;
+      margin-left: 10em;
+      opacity: .7;
+      position: absolute;
+      z-index: -1;
+    }
+
+    h1 {
+      letter-spacing: 1px;
+      color: #0B2433;
+      padding-top: .5em;
+      padding-left: .5em;
+      font-family: "Amatic SC";
+      font-size: 3em;
+      text-shadow: 2px 2px #BEC67A;
+    }
+
+    input[type='text'] {
+      height: 2.5em;
+      width: 25em;
+      border: 3px;
+      border-radius: 4px;
+      margin-left: 1em;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #dedede;
+        text-align: center;
+        letter-spacing: .2em;
+        height: 3em;
+      }
+    }
+
+    input[type='submit']{
+      display: flex;
+      margin-left: 1em;
+      font-family: "Amatic SC";
+      background:none;
+      border:none;
+      font-size: 1.5em;
+      color: #5ec;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      background: #7A7C6A;
+    }
+
+    form {
+      max-width: 100%;
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #333;
+      background: #204B58; opacity: .7;
+      padding: 1em;
+      border-radius: 2em;
+    }
+    @media only screen and (max-width: 300px) {
+      form {
+        max-width: 100%
+      }
+    }
+  }
+
+  .portfolio {
+    display: flex;
+    margin-top: 1em;
+    margin-right: -1em;
+
+    img {
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    }
+
+  }
+  .portfolio:hover {
+    background: #535542;
+    cursor: pointer;
+  }
+}
+
+
+.portfolio-nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+
+  a {
+    font-size: 1.4em;
+    color: #BEC67A;
+    text-decoration: none;
+    letter-spacing: .2em;
+  }
+
+  .spring {
+    flex: 1;
+  }
+
+  input[type='submit'] {
+    font-family: "Amatic SC";
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: #BEC67A;
+    letter-spacing: .1em;
+
+  }
+}

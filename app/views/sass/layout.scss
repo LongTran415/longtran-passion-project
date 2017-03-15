@@ -1,0 +1,36 @@
+
+.fill-height-or-more {
+  display: flex;
+  flex-direction: column
+}
+
+.fill-height-or-more > div {
+  /* these are the flex items */
+  flex: 1;
+  height:100vh
+}
+
+.content {
+  height: 100%;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+
+.top {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.bottom {
+  height: 20%;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,33 @@
+.portfolio-show {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Amatic SC";
+
+
+  .right {
+    flex: 2;
+    padding: 2em;
+    background: rgba(218, 229, 230, .5);
+
+    form {
+      max-width: 100%;
+      width: 40%;
+      display: flex;
+    }
+
+    h1 {
+      letter-spacing: 1px;
+      color: #0B2433;
+      padding-top: .5em;
+      padding-left: .5em;
+      font-family: "Amatic SC";
+      font-size: 3em;
+      text-shadow: 2px 2px #BEC67A;
+    }
+
+    a {
+      margin-top: 1em;
+    }
+  }
+}

@@ -1,22 +1,19 @@
-<h1>Edit this portfolio</h1>
+<div class="portfolio-edit">
+  <div class="right">
+    <h1>Edit this portfolio</h1>
+    <a href="/portfolios/<%= @portfolio.id %>">back to porfolio</a>
+    <h3>Add an image:<h3>
 
-<p>Add an image:</p>
-<form action="/images" method="post" enctype="multipart/form-data">
-  <input type='hidden' name='portfolio_id' value='<%= @portfolio.id %>'>
-  <input type='file' name="data">
-  <input type='submit' value='Save'></input>
-</form>
-
-<p>select an image and click delete:</p>
-
-  <% @portfolio.images.each do |image| %>
-  <p>
-    <img src='<%= image.data.url(:thumbnail) %>'>
-    <form action="/images/<%= image.id%>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="delete">
+    <form action="/images" method="post" enctype="multipart/form-data">
+      <input type='hidden' name='portfolio_id' value='<%= @portfolio.id %>'>
+      <input type='file' name="data">
+      <input type='submit' value='Save'></input>
     </form>
- </p>
-  <% end %>
 
-<p><a href="/portfolios/<%= @portfolio.id %>">back to porfolio</a></p>
+    <div id="image-container">
+      <% @portfolio.images.each do |image| %>
+      <a href="/images/<%= image.id %>"><img src='<%= image.data.url(:medium) %>'></a>
+      <% end %>
+    </div>
+  </div>
+</div>
